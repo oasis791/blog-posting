@@ -15,7 +15,8 @@
 
 ## 영속성 컨텍스트를 플러시하는 방법
 다음 내용들을 직접 사용할 일은 거의 없지만, 테스트 등의 과정을 위해서 알아놔야 한다!
-1. em.flush() - 직접 호출
+
+### em.flush() - 직접 호출
 ```java
 Member member = new Member("100L, "memberA");
 em.persist(member);
@@ -25,7 +26,7 @@ System.out.println("================");
 tx.commit();
 ```
 
-```
+```plain
 Hibernate:
 	/* insert hellojpa.Member
 		*/ insert
@@ -37,14 +38,15 @@ Hibernate:
 ================
 // tx.commit()에서 flush가 자동 호출 되기 전, SQL 쿼리들이 발생한다는 것을 알 수 있음
 ```
-2. 트랜잭션 커밋 - 플러시 자동 호출
+
+### 트랜잭션 커밋 - 플러시 자동 호출
 ```java
 Member member = new Member("100L, "memberA");
 em.persist(member);
 tx.commit();
 ```
 
-```
+```plain
 Hibernate:
 	/* insert hellojpa.Member
 		*/ insert
@@ -57,7 +59,7 @@ Hibernate:
 //tx.commit()으로 인해, flush()가 호출됨을 알 수 있다.
 ```
 
-3. JPQL 쿼리 실행 - 플러시 자동 호출
+### JPQL 쿼리 실행 - 플러시 자동 호출
 ```java
 em.persist(memberA);
 em.persist(memberB);
