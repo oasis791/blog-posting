@@ -3,10 +3,10 @@
 > 본 포스팅의 이미지 저작권은 [자바 ORM 표준 JPA 프로그래밍 - 기본편 (김영한)](https://www.inflearn.com/course/ORM-JPA-Basic) 강의에 있습니다.
 
 ## 영속성 컨텍스트의 이점
-1. [1차 캐시](#엔티티-조회)
-2. [영속 엔티티의 동일성(identity) 보장](#영속-엔티티의-동일성(identity)-보장)
-3. [트랜잭션을 지원하는 쓰기 지연 (transactional write-behind)](#트랜잭션을-지원하는-쓰기-지연-(transactional-write-behind))
-4. [변경 감지(Dirty Checking)](#변경-감지(Dirty-Checking))
+1. 1차 캐시
+2. 영속 엔티티의 동일성(identity) 보장
+3. 트랜잭션을 지원하는 쓰기 지연 (transactional write-behind)
+4. 변경 감지(Dirty Checking)
 5. 지연 로딩(Lazy Loading)
 
 ## 엔티티 조회
